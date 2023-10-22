@@ -15,7 +15,7 @@
 #include "DIO_interface.h"
 
 
-void LCD_sendCommand(uint8 command){
+void LCD_sendCommand(u8 command){
 	//RS >> CLEAR (INSTRUCTION CODE)
 	DIO_SetPinValue(LCD_RS_PORT_ID,LCD_RS_PIN_ID,LOW);
 	_delay_ms(1); /* page 6 in data sheet>> delay for processing Tas = 50ns */
@@ -75,7 +75,7 @@ void LCD_init(void){
 }
 
 
-void LCD_displayCharacter(uint8 data){
+void LCD_displayCharacter(u8 data){
 		DIO_SetPinValue(LCD_RS_PORT_ID,LCD_RS_PIN_ID,HIGH); /* Data Mode RS=1 */
 	_delay_ms(1); /* delay for processing Tas = 50ns */
 	DIO_SetPinValue(LCD_EN_PORT_ID,LCD_EN_PIN_ID,HIGH); /* Enable LCD E=1 */
@@ -103,7 +103,7 @@ void LCD_displayCharacter(uint8 data){
 }
 
 void LCD_displayString(const char *Str){
-	uint8 i = 0;
+	u8 i = 0;
 	while(Str[i] != '\0')
 	{
 		LCD_displayCharacter(Str[i]);
@@ -111,9 +111,9 @@ void LCD_displayString(const char *Str){
 	}
 }
 
-void LCD_moveCursor(uint8 row,uint8 col)
+void LCD_moveCursor(u8 row,u8 col)
 {
-	uint8 lcd_memory_address;
+	u8 lcd_memory_address;
 
 	/* Calculate the required address in the LCD DDRAM */
 	switch(row)
@@ -135,7 +135,7 @@ void LCD_moveCursor(uint8 row,uint8 col)
 	LCD_sendCommand(lcd_memory_address | LCD_SET_CURSOR_LOCATION);
 }
 
-void LCD_displayStringRowColumn(uint8 row,uint8 col,const char *Str)
+void LCD_displayStringRowColumn(u8 row,u8 col,const char *Str)
 {
 	LCD_moveCursor(row,col); /* go to to the required LCD position */
 	LCD_displayString(Str); /* display the string */

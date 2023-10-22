@@ -54,13 +54,13 @@ void LCD_init(void);
  * Description :
  * Send the required command to the screen
  */
-void LCD_sendCommand(uint8 command);
+void LCD_sendCommand(u8 command);
 
 /*
  * Description :
  * Display the required character on the screen
  */
-void LCD_displayCharacter(uint8 data);
+void LCD_displayCharacter(u8 data);
 
 /*
  * Description :
@@ -72,13 +72,13 @@ void LCD_displayString(const char *Str);
  * Description :
  * Move the cursor to a specified row and column index on the screen
  */
-void LCD_moveCursor(uint8 row,uint8 col);
+void LCD_moveCursor(u8 row,u8 col);
 
 /*
  * Description :
  * Display the required string in a specified row and column index on the screen
  */
-void LCD_displayStringRowColumn(uint8 row,uint8 col,const char *Str);
+void LCD_displayStringRowColumn(u8 row,u8 col,const char *Str);
 
 /*
  * Description :
