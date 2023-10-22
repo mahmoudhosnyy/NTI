@@ -35,10 +35,10 @@ void DIO_SetPinValue(u8 u8PortIdCopy , u8 u8PinIdCopy, u8 u8PinValCopy)
 			/* Check on the Required PORT Number */
 			switch (u8PortIdCopy)
 			{
-				case PORTA: CLR_BIT(PORTA_Reg,u8PinIdCopy); break;
-				case PORTB: CLR_BIT(PORTB_Reg,u8PinIdCopy); break;
-				case PORTC: CLR_BIT(PORTC_Reg,u8PinIdCopy); break;
-				case PORTD: CLR_BIT(PORTD_Reg,u8PinIdCopy); break;
+				case PORTA: CLEAR_BIT(PORTA_Reg,u8PinIdCopy); break;
+				case PORTB: CLEAR_BIT(PORTB_Reg,u8PinIdCopy); break;
+				case PORTC: CLEAR_BIT(PORTC_Reg,u8PinIdCopy); break;
+				case PORTD: CLEAR_BIT(PORTD_Reg,u8PinIdCopy); break;
 			}
 		}
 
@@ -102,10 +102,10 @@ void DIO_SetPinDirection (u8 u8PortIdCopy, u8 u8PinIdCopy, u8 u8PinDirCopy)
 			/* Check on the Required PORT Number */
 			switch (u8PortIdCopy)
 			{
-				case PORTA: CLR_BIT(DDRA_Reg,u8PinIdCopy); break;
-				case PORTB: CLR_BIT(DDRB_Reg,u8PinIdCopy); break;
-				case PORTC: CLR_BIT(DDRC_Reg,u8PinIdCopy); break;
-				case PORTD: CLR_BIT(DDRD_Reg,u8PinIdCopy); break;
+				case PORTA: CLEAR_BIT(DDRA_Reg,u8PinIdCopy); break;
+				case PORTB: CLEAR_BIT(DDRB_Reg,u8PinIdCopy); break;
+				case PORTC: CLEAR_BIT(DDRC_Reg,u8PinIdCopy); break;
+				case PORTD: CLEAR_BIT(DDRD_Reg,u8PinIdCopy); break;
 			}
 		}
 

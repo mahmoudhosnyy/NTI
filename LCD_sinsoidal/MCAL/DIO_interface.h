@@ -42,3 +42,6 @@ void DIO_SetPinDirection (u8 u8PortIdCopy, u8 u8PinIdCopy, u8 u8PinDirCopy);
 void DIO_SetPortDirection (u8 u8PortId, u8 u8PortDir);
 
 void DIO_SetPortValue     (u8 u8PortId, u8 u8PortVal);
+
+
+#endif
