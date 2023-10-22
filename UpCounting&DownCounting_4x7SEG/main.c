@@ -23,7 +23,7 @@ void main (void){
 	SEVENSEG_displayNum(seg4_counter,COM4);
 	while (1){
 		/* DISPLAYING NUMBERS ON 4-7SEGMENTS (DELAY TO VISIBILITY) */
-		for (u8 i=0;i<=100;i++){
+		for (u8 i=0;i<=10;i++){
 			SEVENSEG_displayNum(seg1_counter,COM1);
 			_delay_ms(10);
 			SEVENSEG_displayNum(seg2_counter,COM2);
@@ -52,5 +52,6 @@ void main (void){
 		}
 		
 	}
+	_delay_ms(40);
 	
 }
